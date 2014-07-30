@@ -1,0 +1,18 @@
+set xlabel 'year'
+set ylabel 'mileage'
+set zlabel 'price'
+
+
+set key below noauto
+
+spl [:2015][0:][0:] \
+	'outback.dat'   u 1:2:3 w p pt 7      tit 'Outback',\
+	'doutback.dat'  u 1:2:3 w p pt 1 lc 1 tit 'Dealer Outback',\
+	'poutback.dat'  u 1:2:3 w p pt 5 lc 1 tit 'Pre-Owned Outback',\
+	'noutback.dat'  u 1:2:3 w p pt 4 lc 1 tit 'New Outback',\
+	'forester.dat'  u 1:2:3 w p pt 7 lc 3 tit 'Forester',\
+	'dforester.dat' u 1:2:3 w p pt 1 lc 3 tit 'Dealer Forester',\
+	'pforester.dat' u 1:2:3 w p pt 5 lc 3 tit 'Pre-Owned Forester',\
+	'nforester.dat' u 1:2:3 w p pt 4 lc 3 tit 'New Forester',\
+	0 lt -1 
+
